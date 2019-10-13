@@ -12,4 +12,8 @@ if __name__ == "__main__":
             print_commit(commit)
             pass
     else:
-        print('Could not load repository at {} :('.format(repo_path))
+        
+        for commit, lines in repo.blame('HEAD', filepath):
+    if tlc <= ln < (tlc + len(lines)):
+         print(commit)
+    tlc += len(lines)
